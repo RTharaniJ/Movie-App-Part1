@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+:root {
+    --primary-color: #080001;
+    --secondary-color: #01065f97;
+    --tertiary-color: #fff
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    height: 100px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+
+}
+
+.nav .main_menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nav .main_menu h1 {
+  
+    color: var(--tertiary-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+
+}
+
+.nav .main_menu ul {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    color: var(--tertiary-color);
+}
+
+.nav .main_menu ul li {
+    list-style: none;
+    padding-right: 20px;
+    position: relative;
+}
+
+.nav .main_menu ul li a:hover {
+    color: #af0014;
+}
+
+
+.nav .main_menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav.active a {
+    color: var(--tertiary-color);
+
+}
+
+.nav.active {
+    /* padding: 1px 0; */
+    background-color: var(--tertiary-color);
+    z-index: 999;
+   
+    background-color: rgba(9, 8, 8, 0.747);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.nav.active .logo{
+    padding-left: 40px;
+}
+.nav.action #form .search{
+
+   border: 1px solid rgb(221, 221, 221);
+}
+
+.main_menu ul li:hover .dropdown_menu {
+    position: absolute;
+    display: block;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.dropdown_menu ul {
+    display: block;
+    margin: 10px;
+   
+    /* margin-left: -20px; */
+}
+
+.dropdown_menu ul li {
+    width: 100px;
+    padding: 5px 0;
+
+}
+
+.dropdown_menu ul li:hover {
+    color: #af0014;
+
+}
+
+.form {
+    display: flex;
+}
+
+.form i {
+    color: var(--tertiary-color);
+    font-size: 22px;
+    margin: 24px 0 0 -50px;
+    padding: 2px;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    box-shadow: rgba(41, 41, 203, 0.525) 0px 13px 27px -5px, rgba(96, 22, 22, 0.589) 0px 8px 16px -8px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--tertiary-color);
+    margin: 10px;
+}
+
+.search::placeholder {
+    columns: #7378c5;
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main_menu i{
+   font-size: 30px;
+    color: #e4e2e6;
+  
+   padding: 20px;
+}
+
+.movie {
+    width: 200px;
+    height: 400px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+ 
+
+}
+
+.movie img {
+    width: 100%;
+
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem;
+
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    margin-right: 3px;
+
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.red {
+    color: lightcoral;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.overview {
+    background-color: rgba(16, 16, 16, 0.783);
+    color: var(--tertiary-color);
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+
+}
